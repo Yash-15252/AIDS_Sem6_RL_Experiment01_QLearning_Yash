@@ -4,7 +4,7 @@
 To implement Linear Regression algorithm as part of Reinforcement Learning lab experiment.
 
 ## Problem Statement
-[Describe the specific problem solved in RL_EXP_1.ipynb]
+Train taxi agent in 5x5 gridworld to pick up passenger from blue loc, drop at yellow loc safely.
 
 ## Brief Theory
 Linear Regression is a supervised learning algorithm used to predict continuous values. It models the relationship between input features and output by fitting a linear equation.
@@ -23,5 +23,4 @@ Output screenshots are available in `screenshots/` directory.
 The linear regression model successfully predicts the target variable with acceptable accuracy. Future improvements can include feature engineering and regularization.
 
 ## References
-- [List any references used]
 - Scikit-learn documentation for LinearRegression
