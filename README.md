@@ -1,26 +1,29 @@
-# AIDS_Sem8_RL_Experiment01_LinearRegression
+# AIDS_Sem8_RL_Experiment01_QTaxiLearning
 
 ## Aim
-To implement Linear Regression algorithm as part of Reinforcement Learning lab experiment.
+    Implement Q-Learning agent to solve Taxi-v3 environment (pickup/drop passengers optimally).
 
 ## Problem Statement
 Train taxi agent in 5x5 gridworld to pick up passenger from blue loc, drop at yellow loc safely.
 
 ## Brief Theory
-Linear Regression is a supervised learning algorithm used to predict continuous values. It models the relationship between input features and output by fitting a linear equation.
+Q-Learning: Off-policy TD method. Update: Q(s,a) ← Q(s,a) + α[r + γ maxQ(s',a') - Q(s,a)]. Table [500 states × 6 actions].
 
 ## Implementation Explanation
-The implementation is provided in `src/RL_EXP_1.ipynb`. It includes:
-- Data loading and preprocessing
-- Model training using linear regression
-- Evaluation metrics
+`src/RL_EXP_1.ipynb`:
+- Load Gymnasium Taxi-v3 (render rgb_array)
+- Q-table zeros [500,6]
+- Random baseline, single episode demo
+- Train 2000 episodes (α=0.618)
+- Test optimal policy, render
 
 ## Results
-Output screenshots are available in `screenshots/` directory.
-[Add screenshots of model performance, predictions, etc. after running the notebook]
+After 2000 eps: Total reward ~7 (vs random 200+ steps). Screenshots: states 452, env renders, Q-update plot.
+Add run screenshots to `screenshots/`.
 
 ## Conclusion
-The linear regression model successfully predicts the target variable with acceptable accuracy. Future improvements can include feature engineering and regularization.
+Q-Learning converged to optimal policy efficiently for tabular Taxi env.
 
 ## References
-- Scikit-learn documentation for LinearRegression
+- Gymnasium Taxi-v3 docs
+- Sutton&Barto RL book Ch6
