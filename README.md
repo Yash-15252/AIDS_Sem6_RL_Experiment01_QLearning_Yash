@@ -56,7 +56,7 @@ After 2000 episodes: Reward=+7 (optimal policy)
 Test Run: Taxi picks up → navigates → drops off (+20)
 ```
 
-**Convergence**: Q-learning discovers optimal policy π* maximizing +20 reward.
+**Convergence**: Q-learning discovers optimal policy π* maximizing +20 reward
 
 ## Sample Output
 ```
